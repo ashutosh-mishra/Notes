@@ -128,14 +128,20 @@ privilages. Use count can also specified at the time of token creation.
   * vault destroys the secret if lease duration expires.
  
  
- 1. User Flow
-     ![User Flow](https://)
+ 1. Logical flow
+     ![](http://bilalaybar.tech/wp-content/uploads/2017/05/vault_logic.png)
      
- 2. Authentication sequence
-     ![Authentication sequence](https://)
      
- 3. Ssh Login Flow
-     ![Ssh Login Flow](https://)
+ 2. User Flow
+     ![](/images/user-create.png)
+     
+     
+ 3. Authentication sequence
+     ![](/images/authentication-sequence.png)
+     
+     
+ 4. Ssh Login Flow
+     ![](/images/ssh-login-flow.png)
      
 
  
