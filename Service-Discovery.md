@@ -13,7 +13,6 @@ Service registeration happens via following ways :
 ### Self registeration
 Service register itself with service registry on every change of states. Fo Ex. Whenever service comes up, goes down, configuring, services registers its current state with service registry.
 ![](/images/self-registeration.png)
-![](https://cdn.auth0.com/blog/microservices/self-registration-diagram.png)
 
 ### Via other system components(Third party registeration)
 In this approach services doesn't interface with service registry directly but registers via some other component. A typical approach would be a service manager responsible for getting the service states and updating those states in service registry. Some of the available tools are Marathon, Docker-swarm, etc.
