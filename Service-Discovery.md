@@ -66,4 +66,6 @@ One should select tool, which fits with current need, but not what is popular. K
   - Mesos, etc.
 
 
-![Reference](https://www.youtube.com/watch?v=PptS7EgQvx4)
+Reference:
+1. ![Service Discovery and Registration in a Microservices Architecture](https://www.youtube.com/watch?v=PptS7EgQvx4)
+2. ![An Introduction to Microservices, Part 3: The Service Registry](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
