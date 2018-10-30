@@ -107,6 +107,7 @@ This can be resolved by providing proper NTP server entries in /etc/ntp.conf. Re
 This can be resolved by restarting control-node container. Control node has xmmp connection with vrouter, and if 
 control node is not working well, vrouter show 'No configuration for self'.
 
+
 Controller can stuck in initializing state due to various issues:
 
 1. Cassandra for config node is not working, 
@@ -137,3 +138,24 @@ $ nodetool -p 7201 status
 sudo chown -R cassandra:cassandra /var/lib/cassandra/data
 sudo chown -R cassandra:cassandra /var/lib/cassandra/commitlog
 ```
+
+
+
+## Usefull Contrail Introspect APIs:
+Virtual machine interfaces - http://192.168.6.240:8082/virtual-machine-interfaces
+Individual interface - http://192.168.6.240:8082/virtual-machine-interface/64400faf-c08d-4e77-8265-8f0b0d9dacce
+
+IfMap Server
+http://192.168.6.240:8083/ifmap_server_show.xml
+
+Sandesh trace introspect
+http://192.168.6.240:8083/sandesh_trace.xml
+
+Sandesh Interface Response - http://192.168.6.241:8085/Snh_ItfReq
+
+Sandesh VRF list - http://192.168.2.136:8085/Snh_VrfListReq?name=
+
+[Contrail-Vrouter-Agent Introspect wiki](https://github.com/Juniper/contrail-controller/wiki/Contrail-Vrouter-Agent)
+
+
+
