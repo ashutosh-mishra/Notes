@@ -42,7 +42,7 @@ Each neutron port has a vnic-type. Contrail supports following methods for vRout
 - Virtio-forwarder: DPDK vhost user mode.
 
 
-**Summary of plugging methods:
+**Summary of plugging methods:**
 
 Existing plugging methods supported by Contrail os-vif plugin:
 ```
@@ -69,7 +69,7 @@ Existing plugging methods supported by Contrail os-vif plugin:
 
 ## SRIOV support
 To enable SR-IOV support in Tungsten Fabric, following config need to add in instances.yaml file under vrouter section
-```
+```ansible
 vrouter:
 	SRIOV: true
 	SRIOV_VF: 3
@@ -81,7 +81,7 @@ To launch a SRIOV VM:
 
 create a neutron port as below and use the created port to launch vm.
 
-```
+```bash
 neutron port-create network-name --name sriov_port --binding:vnic_type direct
 ```
 While creating neutron port, vnic_type need to pass as "direct", which maps to vif type as "hw_veb".
