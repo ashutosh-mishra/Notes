@@ -9,7 +9,7 @@
 4. Legacy path: VIF driver then invoke legacy non-os-vif path, which identifies and invoke the
 corresponding implementation based on vif_type. VIF driver invoke REST call to add add tap interface in vrouter.
 
-()[images/os-vif paths.png]
+![Plugging Workflow](/images/os-vif paths.png)
 - Legacy path:
 [Vif driver](vif driver link) directly invokes vendor drivers methods based on vif_type. Vendor driver
 changes vif driver to add corresponding support.
@@ -42,8 +42,10 @@ Each neutron port has a vnic-type. Contrail supports following methods for vRout
 - Virtio-forwarder: DPDK vhost user mode.
 
 
-Summary of plugging methods
+**Summary of plugging methods:
+
 Existing plugging methods supported by Contrail os-vif plugin:
+```
 - Legacy mode:
   - VIF type: hw_veb
     - VNIC type: direct
@@ -61,18 +63,19 @@ Existing plugging methods supported by Contrail os-vif plugin:
     - VNIC type: normal
       - Details: Classic kernel plugging (vrouter.ko) via TAP device
       - os-vif object: VIFGeneric
-
+```
 
 
 
 ## SRIOV support
 To enable SR-IOV support in Tungsten Fabric, following config need to add in instances.yaml file under vrouter section
-
+```
 vrouter:
 	SRIOV: true
 	SRIOV_VF: 3
 	SRIOV_PHYSICAL_INTERFACE: eno1
 	SRIOV_PHYS_NET: physnet1
+```
 
 To launch a SRIOV VM:
 
