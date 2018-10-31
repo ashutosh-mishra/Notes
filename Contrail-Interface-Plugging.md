@@ -9,9 +9,9 @@
 4. Legacy path: VIF driver then invoke legacy non-os-vif path, which identifies and invoke the
 corresponding implementation based on vif_type. VIF driver invoke REST call to add add tap interface in vrouter.
 
-![Plugging Workflow](/images/os-vif paths.png)
+![Plugging Workflow](/images/os-vif-paths.png)
 - Legacy path:
-[Vif driver](vif driver link) directly invokes vendor drivers methods based on vif_type. Vendor driver
+[Vif driver](https://github.com/openstack/nova/blob/master/nova/virt/libvirt/vif.py) directly invokes vendor drivers methods based on vif_type. Vendor driver
 changes vif driver to add corresponding support.
 
 - OS-VIF Plugin path:
@@ -23,9 +23,9 @@ Os-vif is a library for plugging and unplugging virtual interfaces (VIFs) in Ope
 Basically os-vif defines a common model for representing VIF types in OpenStack.
 
 Nova vif driver checks for os-vif object, which should be defined in [os_vif_util](nova/network/os_vif_util.py).
-Object will contains vnic_type with corresponding port-profile, device address, device type and plugin details. 
+Object will contains vnic_type with corresponding port-profile, device address, device type and plugin details.
 
-Contrail's os-vif plugin is defined in [vrouter.py]() which is maintained in controller repo in openstack folder. After installing setup, mentioned os-vif plugin will be installed at /opt/plugin/site-packages.
+Contrail's os-vif plugin is defined in [vrouter.py](https://github.com/Juniper/contrail-nova-vif-driver/blob/master/vif_plug_vrouter/vrouter.py#L132) which is maintained in [contrail-nova-vif-driver](https://github.com/Juniper/contrail-nova-vif-driver) repo. After installing setup, mentioned os-vif plugin will be installed at /opt/plugin/site-packages.
 
 
 
