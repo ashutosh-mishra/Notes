@@ -1,6 +1,8 @@
-##Vrouter Agent:
+
+## Vrouter Agent:
 Vrouter Agent(Also known as VNsw agent) is responsible to manage dataplane component(vrouter kernel module).
 - Interface with Controller to get the configuration
+
   Agent connects with controller via xmpp channel. Agent gets the configuration and converts it into the datapath understandable format.
   Agent manages the route info provided by Controller.
 - Collect and export statistics from datapath
@@ -15,7 +17,10 @@ Agent maintains a REST server and exposed REST APIs through which user can add/d
 Interface can be added as:
 
 ```
-vrouter-port-control --oper=add --vm_project_uuid=0281c3a7df464eb28130c88beaedf5d7  --instance_uuid=a2a2b0f3-890b-496f-8cbd-05bbd979c689  --vm_name=mc1   --uuid=a77fd887-a523-47ea-b149-aeffe524a0e7   --vn_uuid=e12140ca-cdb7-4759-b3d7-8e5f867f1b15  --port_type=NovaVMPort  --tap_name=enp132s0 --mac=02:a7:7f:d8:87:a5 --ip_address=15.0.0.3   --ipv6_address=   --tx_vlan_id=-1  --rx_vlan_id=-1
+vrouter-port-control --oper=add --vm_project_uuid=0281c3a7df464eb28130c88beaedf5d7
+--instance_uuid=a2a2b0f3-890b-496f-8cbd-05bbd979c689  --vm_name=mc1   --uuid=a77fd887-a523-47ea-b149-aeffe524a0e7
+--vn_uuid=e12140ca-cdb7-4759-b3d7-8e5f867f1b15  --port_type=NovaVMPort  --tap_name=enp132s0
+--mac=02:a7:7f:d8:87:a5 --ip_address=15.0.0.3 --ipv6_address= --tx_vlan_id=-1  --rx_vlan_id=-1
 ```
 
 Interface can be deleted as:
@@ -26,7 +31,7 @@ vrouter-port-control --oper=delete --uuid=a77fd887-a523-47ea-b149-aeffe524a0e7
 [vrouter-port-control](https://github.com/Juniper/contrail-controller/blob/master/src/vnsw/agent/port_ipc/vrouter-port-control) script is used to add tap interfaces in vrouter while launching vms. Refer [Contrail-Interface-Plugging](https://github.com/ashutosh-mishra/Notes/blob/master/Contrail-Interface-Plugging.md) doc for interface plugging in vrouter.
 
 
-Interface add/delete can also be done via (vif command line](https://www.juniper.net/documentation/en_US/contrail3.2/topics/task/configuration/vrouter-cli-utilities-vnc.html#jd0e115) utility.
+Interface add/delete can also be done via [vif command line](https://www.juniper.net/documentation/en_US/contrail3.2/topics/task/configuration/vrouter-cli-utilities-vnc.html#jd0e115) utility.
 
 Curl commands to add the port
 ```
@@ -61,8 +66,10 @@ curl -X GET http://192.168.6.240:9091/port/6eaf76b9-8b14-467d-a6ca-df39b3b0b54b
 
 
 
+- Port Add Rest Call Handler
 ![port-add-rest-handler](/images/port-add-rest-handler.png)
 
+- Interface OnChange Handler
 ![interface-on-change](/images/interface-on-change.png)
 
 
@@ -85,5 +92,7 @@ Functionality of Ksync:
 
 
 
+### Interface Initialize
 
-
+- Interface module
+![interface-initialize](/images/interface-initialize.svg)
