@@ -21,9 +21,9 @@ App and Twelve factor app are used interchangeably in the notes
 - App should declare all dependencies via dependency declaration manifest
 - App should use dependency isolation to separate out local environments
 - App should never rely on implicit existance of system-wide packages
-- For Ex:
-  a) Python uses pip for declaration(requirements.txt) & virtualenv for isolation
-  b) Ruby   uses Gemfile for decralation               & bundle exec for isolation
+- For Ex:    
+  a) Python uses pip for declaration(requirements.txt) & virtualenv for isolation    
+  b) Ruby   uses Gemfile for decralation               & bundle exec for isolation    
   c) C      has  autoconf for declaration              & static library can provide isolation
 
 ## 3. Configs
