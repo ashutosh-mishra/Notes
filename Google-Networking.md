@@ -42,7 +42,7 @@ Available networking Services/Features:
 - **Network Service Tiers**: premium tier, standard tier for network traffic, where premium tier uses google backbone network and standard tier uses ISP network. Standard tier offers less   performance with less pricing.
 - **Network Telemetry**: Realtime data collection service w.r.t network traffic. While creating subnet, flow logging can be configured. By-default flow logging is disabled.
 ********
-- **Traffic Director**: Service mesh traffic management
+- [**Traffic Director**](https://github.com/ashutosh-mishra/Notes/blob/master/Traffic-director.md): Service mesh traffic management
 - **Google Cloud Service Mesh**: Service-aware network management    
 ********
 - **Cloud Armor**: DDoS protection and WAF    
