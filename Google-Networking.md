@@ -1,4 +1,4 @@
-Google Networking
+## **Google Networking**
 
 
 Virtual Private Cloud: SDN
@@ -22,8 +22,8 @@ Virtual Private Cloud: SDN
   - [URL Paths](https://github.com/ashutosh-mishra/Notes/blob/master/GCP-Load%20Balancer.md)
   - [Health check](https://github.com/ashutosh-mishra/Notes/blob/master/GCP-Load%20Balancer.md)
 - **Config**
-  - Private IP Access**
-    Instances in VPC subnet can communicate with google API and services using just internal IP address without any external IP address.
+  - **Private IP Access**    
+  Instances in VPC subnet can communicate with google API and services using just internal IP address without any external IP address.
 
 Available networking Services/Features:
 - **Carrier Peering**: Peer through a carrier
