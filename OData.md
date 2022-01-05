@@ -124,11 +124,11 @@ c.4 Select the properties
 ```
 c.5 Expand related entities
 
+&nbsp;
 
 
 __d. Filters__
 
-&nbsp;
 d.1 Filter on property
 ```
 <serviceRoot URL>/<entity>?$filter=FirstName eq 'Ash'
